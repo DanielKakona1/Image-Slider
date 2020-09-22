@@ -1,38 +1,162 @@
-.App {
-  text-align: center;
+*{
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  overflow: hidden;
+
+}
+.banner1, .banner2 , .banner3 , .banner4{
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+img{
+  width: 120%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: zoom-out 3s linear infinite;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes zoom-out {
+  100%{
+    width: 100%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.text-box {
+  width: 600px;
+  position: absolute;
+  top: 300px;
+  left: 100px;
+  color: #fff;
+  animation: textup 12s linear infinite;
+  transform: translateY(100px);
+}
+.text-box h1 {
+  margin-bottom: 40px;
+}
+.text-box p {
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 80px;
+}
+.text-box span {
+  background: red;
+  height: 1px;
+  width: 100px;
+  position: absolute;
+  left: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.banner1{
+  animation: slide1 12s linear infinite;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.banner2{
+  animation: slide2 12s linear infinite;
+}
+
+.banner3{
+  animation: slide3 12s linear infinite;
+}
+
+.banner4{
+  animation: slide4 12s linear infinite;
+}
+
+@keyframes slide1{
+  0%{
+    visibility: visible;
   }
-  to {
-    transform: rotate(360deg);
+  25%{
+    visibility: hidden;
   }
+  50%{
+    visibility: hidden;
+  }  
+  75%{
+    visibility: hidden;
+  }
+  100%{
+    visibility: visible;
+  }
+}
+
+@keyframes slide2{
+  0%{
+    visibility: hidden;
+  }
+  25%{
+    visibility: hidden;
+  }
+  50%{
+    visibility: visible;
+  }  
+  75%{
+    visibility: hidden;
+  }
+  100%{
+    visibility: hidden;
+  }
+}
+
+@keyframes slide3{
+  0%{
+    visibility: hidden;
+  }
+  25%{
+    visibility: hidden;
+  }
+  50%{
+    visibility: hidden;
+  }  
+  75%{
+    visibility: visible;
+  }
+  100%{
+    visibility: hidden;
+  }
+}
+
+@keyframes slide4{
+  0%{
+    visibility: hidden;
+  }
+  25%{
+    visibility: hidden;
+  }
+  50%{
+    visibility: hidden;
+  }  
+  75%{
+    visibility: hidden;
+  }
+  100%{
+    visibility: visible;
+  }
+}
+
+@keyframes textup {
+  10% { transform: translateY(0px);}
+  100% {transform: translateY(0px);}
+}
+
+.text-box1 {
+  animation-delay: 0s;
+}
+
+.text-box2 {
+  animation-delay: 3s;
+}
+
+.text-box3 {
+  animation-delay: 6s;
+}
+
+.text-box4 {
+  animation-delay: 9s;
 }
